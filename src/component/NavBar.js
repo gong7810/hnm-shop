@@ -26,8 +26,13 @@ const NavBar = ({ authenticate, setAuthenticate }) => {
     } else navigate("/login");
   };
 
+  const gotoMain = () => {
+    navigate("/");
+  };
+
   const search = (event) => {
     if (event.key === "Enter") {
+      // console.log(event.key);
       let keyWord = event.target.value;
       navigate(`/?q=${keyWord}`);
     }
@@ -47,6 +52,7 @@ const NavBar = ({ authenticate, setAuthenticate }) => {
         <img
           width={100}
           src="https://i.namu.wiki/i/5om4fdvgxpPu4v0HIchV5CfyMOqmpk2Nw0nrOrmCLmEdmrR-j0eyI8hCFHcpjoswm8Vk_xnFeg3lElxiSkIzsVzNDrm6diwdNeoukCwLPaGKqhjY66C2dnYZpIdGSVqxla7Zcjt0pPWiLRTlsDQzSg.svg"
+          onClick={gotoMain}
         ></img>
       </div>
       <div className="menu-area">
