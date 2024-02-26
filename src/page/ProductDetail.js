@@ -8,7 +8,7 @@ const ProductDetail = () => {
   const [selectSize, setSelectSize] = useState("");
 
   const getProductDetail = async () => {
-    let url = `http://localhost:5000/products/${id}`;
+    let url = `https://my-json-server.typicode.com/gong7810/hnm-shop/products/${id}`;
     await fetch(url)
       .then(function (response) {
         return response.json();
